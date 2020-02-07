@@ -2,14 +2,17 @@
 
 console.log('Task 4');
 
-const formatString = function(string) {
-  if (string) {
-    if (string.length > 40) {
-      return string.slice(0, 39) + '...';
-    }
-    return string;
-  }
-};
+// const formatString = function(string) {
+//   if (string) {
+//     if (string.length > 40) {
+//       return string.slice(0, 39) + '...';
+//     }
+//     return string;
+//   }
+// };
+
+const formatString = (string, maxLength = 40) =>
+  string.length > maxLength ? `${string.slice(0, maxLength - 1)}...` : string;
 
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
